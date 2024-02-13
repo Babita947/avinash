@@ -9,6 +9,18 @@ export default function Page() {
   const handleNoClick = () => {
     setNoCount(noCount + 1);
   };
+  const yesPressedContent = () => {
+    setTimeout(() => {
+      window.location.href = "https://mahigurjarr.github.io/parsi/";
+    }, 1000);
+    
+    return (
+      <>
+        <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+        <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+      </>
+    )
+  };
 
   const getNoButtonText = () => {
     const phrases = [
@@ -35,12 +47,7 @@ export default function Page() {
 
   return (
     <div className="-mt-16 flex h-screen flex-col items-center justify-center">
-      {yesPressed ? (
-        <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
-        </>
-      ) : (
+      {yesPressed ? yesPressedContent() : (
         <>
           <img
             className="h-[200px]"
